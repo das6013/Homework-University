@@ -8,7 +8,7 @@ private:
 	T* a;
 	int n;
 	int mem;
-	void shiftleft(int pos);// сдвиг влево начиная с позиции pos+1
+	void shiftleft(int pos);// Г±Г¤ГўГЁГЈ ГўГ«ГҐГўГ® Г­Г Г·ГЁГ­Г Гї Г± ГЇГ®Г§ГЁГ¶ГЁГЁ pos+1
 public:
 	Arraya(int _n = 1);
 	Arraya(T* b, int m);
@@ -18,19 +18,19 @@ public:
 	void scan();
 	void print();
 	T& operator[](int);
-	int findKey(T);// возвращает индекс элемента или -1, если элемента нет
+	int findKey(T);// ГўГ®Г§ГўГ°Г Г№Г ГҐГІ ГЁГ­Г¤ГҐГЄГ± ГЅГ«ГҐГ¬ГҐГ­ГІГ  ГЁГ«ГЁ -1, ГҐГ±Г«ГЁ ГЅГ«ГҐГ¬ГҐГ­ГІГ  Г­ГҐГІ
 	Arraya<T>& operator+=(T);
 	Arraya<T> operator+(T);
 	Arraya<T>& operator+=(Arraya<T>);
 	Arraya<T> operator+(Arraya<T>);
 	Arraya<T>& operator-=(T);
 	Arraya<T> operator-(T);// b=*this-x
-	Arraya<T>& DelPosEq(int);// возвращает *this
-	Arraya<T>& DelPosNew(int);// возвращает новый массив
+	Arraya<T>& DelPosEq(int);// ГўГ®Г§ГўГ°Г Г№Г ГҐГІ *this
+	Arraya<T>& DelPosNew(int);// ГўГ®Г§ГўГ°Г Г№Г ГҐГІ Г­Г®ГўГ»Г© Г¬Г Г±Г±ГЁГў
 	bool operator==(Arraya<T>);
 	bool operator!=(Arraya<T>);
-	int max();//возвращает индекс макс.
-	int min();//возвращает  индекс мин.
+	int max();//ГўГ®Г§ГўГ°Г Г№Г ГҐГІ ГЁГ­Г¤ГҐГЄГ± Г¬Г ГЄГ±.
+	int min();//ГўГ®Г§ГўГ°Г Г№Г ГҐГІ  ГЁГ­Г¤ГҐГЄГ± Г¬ГЁГ­.
 	void sortShella();
 	template<class T>friend  ostream& operator << (ostream& r, Arraya<T>& x);
 	template<class T>friend  istream& operator >> (istream& r, Arraya<T>& x);
@@ -231,7 +231,7 @@ template <class T>Arraya<T>& Arraya<T>::DelPosEq(int in) {
 
 }
 
-// возвращает *this
+// ГўГ®Г§ГўГ°Г Г№Г ГҐГІ *this
 template <class T>Arraya<T>& Arraya<T>::DelPosNew(int in) {
 	Arraya res(n + z.n);
 	if (in >= n || in < 0) {
@@ -250,10 +250,10 @@ template <class T>Arraya<T>& Arraya<T>::DelPosNew(int in) {
 		return res;
 	}
 
-}// возвращает новый массив
+}// ГўГ®Г§ГўГ°Г Г№Г ГҐГІ Г­Г®ГўГ»Г© Г¬Г Г±Г±ГЁГў
 
 
-// возвращает новый массив
+// ГўГ®Г§ГўГ°Г Г№Г ГҐГІ Г­Г®ГўГ»Г© Г¬Г Г±Г±ГЁГў
 template <class T>bool Arraya<T>::operator==(Arraya<T> X) {
 	if (X.n == n)
 	{
@@ -283,7 +283,7 @@ template <class T>int Arraya<T>::max() {
 		}
 	}
 	return imax;
-}//возвращает индекс макс.
+}//ГўГ®Г§ГўГ°Г Г№Г ГҐГІ ГЁГ­Г¤ГҐГЄГ± Г¬Г ГЄГ±.
 template <class T>int Arraya<T>::min() {
 	int imin = 0;
 	T min = a[imin];
@@ -294,7 +294,7 @@ template <class T>int Arraya<T>::min() {
 		}
 	}
 	return imin;
-}//возвращает  индекс мин.
+}//ГўГ®Г§ГўГ°Г Г№Г ГҐГІ  ГЁГ­Г¤ГҐГЄГ± Г¬ГЁГ­.
 template <class T>void Arraya<T>::sortShella() {
 	int h = n, j;
 	T t;
